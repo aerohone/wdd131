@@ -4,13 +4,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <title>WDD 131: Dynamic Web Fundamentals - Cleon Hone</title>
+    <meta name="author" content="Cleon Hone" />
+    <meta name="description"
+        content="Home page for the class WDD 131, Dynamic Web Fundamentals, where it includes info on myself and links to projects." />
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- End Google Fonts -->
+
 </head>
 
 <body>
-    <h1> Cleon Hone
-        Try 2
-    </h1>
+    <header>
+        <span id="course-title">
+            WDD 131: Dynamic Web Fundamentals
+        </span>
+        <nav>
+            <ul class="navigation">
+                <li><a href="https://www.linkedin.com/" title="LinkedIn ">LinkedIn </a></li>
+                <li><a href="https://byupw.instructure.com/" title="Canvas">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p27#p27"
+                        title="Scripture">Scripture</a></li>
+                <li><a href="#" title="Final Project">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>
+            Cleon Hone
+        </h1>
+        <section class="card">
+            <h2>
+                About Me
+            </h2>
+            <wrap class="about_me">
+                <div class="me">
+                    <p>My name is Cleon Hone, I'm a Mechanical Engineer that is getting into software. I have a BS in
+                        Mechanical Engineering and a MS in Space Resources. I currently work for the Air Force on
+                        missiles.
+                        I
+                        have a beautiful wife and two adorable little girls.</p>
+                </div>
+                <div class="profile">
+                    <img src="images/profile.webp" alt="Picture of Cleon Hone">
+                </div>
+                <h3>
+                    Utah, USA
+                </h3>
+                <div class="location_image">
+                    <img src="images/deer-creek-reservoir.jpg" alt="Picture of Deer Creek Reservoir in Utah, USA">
+                </div>
+                <div class="location">
+                    <p>
+                        Utah is a state of many things. In the north are the tall Rocky Mountains and the Great Salt
+                        Lake
+                        and to
+                        the south are large red rock formations and vast desserts.
+                    </p>
+                </div>
+            </wrap>
+
+        </section>
+        <section class="card">
+            <h2>
+                Web Dev Resources
+            </h2>
+            <ul class="resources">
+                <li><a href="#" title="Dev to Community ">Dev to Community </a></li>
+                <li><a href="#" title="Smashing Magazine">Smashing Magazine</a></li>
+                <li><a href="#" title="CSS Tricks">CSS Tricks</a></li>
+                <li><a href="#" title="W3 Schools">W3 Schools</a></li>
+                <li><a href="#" title="Udemy">Udemy</a></li>
+                <li><a href="#" title="Lorem Picsum Image Placeholder">Lorem Picsum Image Placeholder</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>
+            &copy;<span id="currentyear"></span> | Cleon Hone | Utah
+        </p>
+        <p id="lastModified">
+        </p>
+    </footer>
 </body>
 
 </html>
