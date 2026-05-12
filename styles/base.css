@@ -140,6 +140,11 @@ h3 {
 
 .resources {
     padding: 1rem 2rem 1rem;
+    font-size: larger;
+}
+
+.resources li {
+    padding: 1rem;
 }
 
 footer {
