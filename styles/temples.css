@@ -40,8 +40,8 @@ header {
 }
 
 nav {
+    display: flex;
     max-width: 800px;
-    margin: 1rem auto;
     margin: 0;
 }
 
