@@ -38,7 +38,7 @@ header {
     background-color: var(--font2-color);
     color: var(--font1-color);
 }
-
+ 
 nav {
     display: flex;
     max-width: 800px;
