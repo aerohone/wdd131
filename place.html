@@ -27,23 +27,55 @@
         </h1>
     </header>
     <main>
-        <div class="hero">
-            <source media="(min-width: 750px)" srcset="images/utah-stars-ken-cheung-medium.webp">
-            <img src="images/utah-stars-ken-cheung.webp" alt="">
-        </div>
-        <div class="data">
-            <h2>
-                Data
-            </h2>
-            <p>
-                list here
-            </p>
-        </div>
-        <div class="weather">
-            <!-- SVG Weather Icon Link in assignment-->
-            <source media="" srcset="">
-            <img src="" alt="">
-        </div>
+        <section>
+            <picture class="hero">
+                <source media="(min-width: 550px)" srcset="images/utah-stars-ken-cheung-medium.webp">
+                <img src="images/utah-stars-ken-cheung.webp" alt="Night">
+            </picture>
+            <div class="data">
+                <h2>
+                    Data
+                </h2>
+                <dl>
+                    <dt>Area:</dt>
+                    <dd>219,882 sq km</dd>
+                    <dt>Population:</dt>
+                    <dd>3.55 million</dd>
+                    <dt>Capital:</dt>
+                    <dd>Salt Lake City</dd>
+                    <dt>Languages:</dt>
+                    <dd>English</dd>
+                    <dt>Currency:</dt>
+                    <dd>US Dollar</dd>
+                    <dt>Time Zone:</dt>
+                    <dd>GMT-6</dd>
+                    <dt>Calling Code:</dt>
+                    <dd>+1 (801); (385); (435)</dd>
+                    <dt>Internet TLD:</dt>
+                    <dd>.us</dd>
+                </dl>
+            </div>
+            <div class="weather">
+                <h2>
+                    Weather
+                </h2>
+                <!-- SVG Weather Icon Link in assignment-->
+                <div class="weather-icon">
+                    <img src="images/sun.svg" alt="Sun Icon">
+                </div>
+                <dl>
+                    <dt>Temperature:</dt>
+                    <dd>69 F°</dd>
+                    <dt>Conditions:</dt>
+                    <dd>Sunny</dd>
+                    <dt>Wind:</dt>
+                    <dd>5 mph</dd>
+                    <dt>Wind Chill:</dt>
+                    <dd id="windchill">N/A</dd>
+                </dl>
+            </div>
+        </section>
+
     </main>
     <footer>
         <p>

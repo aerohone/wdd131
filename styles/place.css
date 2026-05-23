@@ -1,0 +1,129 @@
+/* Blue rgba(10,34,58)
+light blue (101,178,232) 
+dark brown (11, 2, 3)
+brown (52, 25, 26)*/
+
+:root {
+    --primary-color: rgb(10, 34, 58);
+    --secondary-color: rgb(101, 178, 232);
+    --font1-color: rgb(255, 255, 255);
+    --third-color: rgb(52, 25, 26);
+    --fourth-color: rgb(11, 2, 3);
+}
+
+body {
+    font-family: Roboto, helvetica, sans-serif;
+    margin: 0;
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
+header {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--font1-color);
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 1.5rem 0 1.5rem;
+}
+
+.data,
+.weather {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border: 1px solid var(--primary-color);
+}
+
+.hero img {
+    width: 450px;
+}
+
+h2 {
+    margin: 0;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.25rem 0.5rem;
+}
+
+dt {
+    font-weight: bold;
+    text-align: right;
+}
+
+dd {
+    margin: 0;
+    text-align: left;
+}
+
+.weather-icon {
+    margin-top: 1rem;
+}
+
+footer {
+    /* grid-column: 1/end; */
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--font1-color);
+}
+
+@media (min-width: 550px) {
+
+    section {
+        position: relative;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .hero img {
+        width: 100%;
+    }
+
+    .data {
+        position: absolute;
+        top: 30px;
+        left: 10px;
+        padding: 0;
+    }
+
+    h2 {
+        text-align: left;
+        background-color: var(--third-color);
+        color: var(--font1-color);
+        padding: 1rem;
+        margin-top: 1rem;
+        margin-right: 1rem;
+    }
+
+    .data dl {
+        grid-template-columns: auto 1fr;
+        padding: 0 1rem;
+    }
+
+    .weather {
+        position: absolute;
+        bottom: 30px;
+        right: 10px;
+        padding: 0;
+    }
+
+    .weather dl {
+        grid-template-columns: 1fr auto;
+        padding: 0 1rem;
+    }
+
+    .weather-icon img {
+        display: none;
+    }
+
+    .weather h2::after {
+        content: "☀️";
+        display: inline-block;
+    }
+}
