@@ -1,0 +1,163 @@
+/* used for the mobile view
+
+:root {
+    --primary-color: rgb(40, 40, 40);
+    --secondary-color: rgb(200, 200, 200);
+    --font1-color: rgb(255, 255, 255);
+    --font2-color: rgb(0, 0, 0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: var(--font2-color);
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+body {
+    font-family: "Elms Sans", sans-serif;
+    font-weight: 400;
+    background-color: var(--secondary-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 1rem auto;
+    background-color: var(--font2-color);
+    color: var(--font1-color);
+}
+ 
+nav {
+    display: flex;
+    max-width: 800px;
+    margin: 0;
+}
+
+#menu {
+    font-size: 2.5rem;
+    background: none;
+    position: absolute;
+    color: var(--font1-color);
+    right: 1rem;
+    order: 0;
+
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "X";
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--font1-color);
+}
+
+.navigation a {
+    display: none;
+    color: var(--font1-color);
+    padding: 0.5rem 4rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+    background-color: var(--secondary-color);
+    color: var(--font2-color);
+}
+
+.open a {
+    display: block;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0.5rem;
+
+}
+
+img {
+    width: 100%;
+    height: auto;
+} */
+
+
+@media (min-width: 800px) {
+
+    h1 {
+        font-size: 2.5rem;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    header {
+        /* display: grid;
+        grid-gap: 1rem; */
+        padding: 20px;
+        margin: 1rem auto;
+        background-color: var(--font2-color);
+        color: var(--font1-color);
+    }
+
+    #menu {
+        display: none;
+    }
+
+
+    .navigation {
+        /* justify-content: flex-end; */
+        flex-direction: row;
+    }
+
+    .navigation a {
+        display: block;
+        padding: 0.5rem 1.5rem;
+        flex: 1 1 100%;
+    }
+
+}
+
+
+/* section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 25px;
+    place-items: center;
+} */
+
+
+
+
+
+
+/* 
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--font1-color);
+} */

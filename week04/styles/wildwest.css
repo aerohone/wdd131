@@ -1,0 +1,46 @@
+:root {
+    --border: 1px solid rgb(0 0 0 / 10%);
+}
+
+table {
+    margin: 1rem auto;
+    border: var(--border);
+    border-collapse: collapse;
+    width: 400px;
+}
+
+caption {
+    padding: 1rem;
+    caption-side: bottom;
+
+}
+
+thead th:first-child {
+    background-color: black;
+    color: white;
+}
+
+th,
+td {
+    padding: .75rem 1.5rem;
+    border: var(--border);
+    white-space: pre;
+}
+
+thead {
+    background-color: rgb(58, 58, 58);
+    color: white;
+}
+
+td {
+    text-align: center;
+}
+
+
+tbody tr:nth-child(even) {
+    background-color: rgb(233, 233, 233);
+}
+
+.blank {
+    background-color: black;
+}

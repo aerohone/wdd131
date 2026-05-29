@@ -1,0 +1,34 @@
+h1 {
+    text-align: center;
+}
+
+main {
+    display: block;
+    margin: 1rem auto;
+    width: 400px;
+}
+
+img {
+    min-height: 600px;
+    width: 100%;
+    background-color: #000;
+    animation: fade 15s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--font1-color);
+}
