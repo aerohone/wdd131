@@ -109,7 +109,7 @@ oldLink.addEventListener("click", () => {
 });
 
 newLink.addEventListener("click", () => {
-  let newLink = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) > 1900);
+  let newLink = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) > 2000);
   createTempleCard(newLink);
 });
 
