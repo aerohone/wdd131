@@ -1,0 +1,45 @@
+:root {
+    --Titles-color: rgb(40, 40, 40);
+    --primary-background-color: rgb(200, 200, 200);
+    --main-text-color: rgb(0, 0, 0);
+    --Alternate-text-color: rgb(255, 255, 255);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Roboto, helvetica, sans-serif;
+    margin: 0;
+    background-color: var(--primary-background-color);
+    text-align: center;
+}
+
+header {
+    display: block;
+    background-color: var(--Titles-color);
+    color: var(--Alternate-text-color);
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+div {
+    padding: 1rem 0;
+    border: thin solid white;
+}
+
+h2 {
+    background-color: var(--Titles-color);
+    color: var(--Alternate-text-color);
+    padding: 0.5rem;
+}
+
+p {
+    padding-top: 1rem;
+}
+
+img {
+    padding: 1rem;
+}
