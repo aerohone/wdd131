@@ -1,5 +1,3 @@
-/* used for the mobile view
-
 :root {
     --primary-color: rgb(40, 40, 40);
     --secondary-color: rgb(200, 200, 200);
@@ -7,12 +5,14 @@
     --font2-color: rgb(0, 0, 0);
 }
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*
 h1 {
     color: var(--font2-color);
 }
