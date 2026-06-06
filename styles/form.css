@@ -31,23 +31,34 @@ form {
 
 fieldset {
     border: none;
-    padding: 1rem 0;
-    padding-bottom: 0;
+    padding: 0;
+    margin-top: 1rem;
 }
 
-label {
+/* label {
     display: block;
+} */
+
+.productName {
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .starRating {
     display: flex;
     justify-content: space-evenly;
     max-width: 400px;
+    padding: 0;
 }
 
 .starRating label {
     display: block;
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
+    text-align: center;
+}
+
+.starRating label input {
+    margin: 0;
 }
 
 .checkboxes {
@@ -107,8 +118,26 @@ footer p {
         max-width: 1000px
     }
 
+    .starRating {
+        display: flex;
+        justify-content: space-evenly;
+        max-width: 100%;
+    }
+
+    fieldset {
+        margin-top: 2rem;
+    }
+
+    .productName select {
+        font-size: 1.2rem;
+    }
+
     .optional {
         font-size: 1rem;
+    }
+
+    form input[type="date"] {
+        font-size: 1.3rem;
     }
 
     form input[type="submit"] {
