@@ -99,3 +99,24 @@ form input[type="submit"] {
 footer p {
     margin: 0;
 }
+
+
+@media screen and (min-width: 700px) {
+    body {
+        font-size: 1.5rem;
+        max-width: 1000px
+    }
+
+    .optional {
+        font-size: 1rem;
+    }
+
+    form input[type="submit"] {
+        font-size: 2.5rem;
+    }
+
+    textarea {
+        width: 100%;
+        min-height: 10rem;
+    }
+}
