@@ -29,21 +29,21 @@ const products = [
 ];
 
 document.addEventListener("DOMContentLoaded", function () {
-
-    products.forEach(product => {
-        const option = document.createElement("option");
-        option.value = product.id;
-        option.textContent = product.name;
-        document.getElementById("pname").appendChild(option);
-    });
-
+    if (window.location.pathname.includes("form.html")) {
+        products.forEach(product => {
+            const option = document.createElement("option");
+            option.value = product.id;
+            option.textContent = product.name;
+            document.getElementById("pname").appendChild(option);
+        });
+    };
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     if (window.location.pathname.includes("review.html")) {
-        let reviewCounter = localStorage.getItem("counterValue") || [];
-        reviewCounter = number(reviewCounter) +1;
+        let reviewCounter = Number(localStorage.getItem("counterValue")) || 0;
+        reviewCounter = reviewCounter + 1;
         localStorage.setItem("counterValue", reviewCounter);
     }
 });
