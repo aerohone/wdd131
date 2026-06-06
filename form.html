@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Cleon Hone">
+    <title>Week 5 Form Assignment</title>
+    <meta name="description" content="Week 5 Form Assignment for WDD 131">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- End Google Fonts -->
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html">
+            <fieldset>
+                <label> Product Name
+                    <select name="pname" id="pname" required>
+                        <option disabled selected value=""> Choose a Product</option>
+                    </select> </label>
+            </fieldset>
+            <fieldset>
+                <div>Overall Rating</div>
+                <div class="starRating">
+                    <label>&star;<input type="radio" id="onestar" name="stars" value="1" required></label>
+                    <label>&star; &star;<input type="radio" id="twostar" name="stars" value="2" required></label>
+                    <label>&star; &star; &star;<input type="radio" id="threestar" name="stars" value="3"
+                            required></label>
+                    <label>&star; &star; &star; &star;<input type="radio" id="fourstar" name="stars" value="4"
+                            required></label>
+                    <label>&star; &star; &star; &star; &star;<input type="radio" id="fivestar" name="stars" value="5"
+                            required></label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <label>Date of Installation <input type="date" name="installationDate" id="instalDate" required></label>
+            </fieldset>
+            <fieldset>
+                <div>Which features did you find useful in the product? </div>
+                <div><em>(Check all that apply)</em></div>
+                <div class="checkboxes">
+                    <label><input type="checkbox" id="durability" name="features" value="durability">Durability</label>
+                    <label><input type="checkbox" id="ease" name="features" value="ease">Ease of Use</label>
+                    <label><input type="checkbox" id="perform" name="features" value="perform">Perform</label>
+                    <label><input type="checkbox" id="design" name="features" value="design">Design</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <label for="review">Written Review <span class="optional">(Optional)</span></label>
+                <textarea id="review" name="review"></textarea>
+            </fieldset>
+            <fieldset>
+                <label for="name">Your Name <span class="optional">(Optional)</span></label>
+                <input type="text" id="name" name="name">
+            </fieldset>
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+
+
+    <footer>
+        <p>
+            &copy;<span id="currentyear"></span> | Cleon Hone | Utah
+        </p>
+        <p id="lastModified">
+        </p>
+    </footer>
+</body>
+
+</html>
