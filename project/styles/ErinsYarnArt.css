@@ -1,6 +1,6 @@
 :root {
-    --primary-color: rgb(40, 40, 40);
-    --secondary-color: rgb(200, 200, 200);
+    --color1: rgb(40, 40, 40);
+    --color2: rgb(200, 200, 200);
     --font1-color: rgb(255, 255, 255);
     --font2-color: rgb(0, 0, 0);
 }
@@ -11,7 +11,7 @@
 }
 
 header {
-    background-color: var(--secondary-color);
+    background-color: var(--color2);
     color: var(--font2-color);
 }
 
@@ -79,6 +79,6 @@ footer {
     /* grid-column: 1/end; */
     text-align: center;
     padding: 1rem;
-    background-color: var(--primary-color);
+    background-color: var(--color1);
     color: var(--font1-color);
 }

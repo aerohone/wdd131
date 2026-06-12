@@ -1,6 +1,6 @@
 :root {
-    --primary-color: rgb(40, 40, 40);
-    --secondary-color: rgb(200, 200, 200);
+    --color1: rgb(40, 40, 40);
+    --color2: rgb(200, 200, 200);
     --font1-color: rgb(255, 255, 255);
     --font2-color: rgb(0, 0, 0);
 }
@@ -11,7 +11,7 @@
 }
 
 header {
-    background-color: var(--secondary-color);
+    background-color: var(--color2);
     color: var(--font2-color);
 }
 
@@ -55,12 +55,59 @@ nav a:hover {
     text-decoration: underline;
 }
 
+body {
+    font-size: 16px;
+    font-family: Roboto, helvetica, sans-serif;
+    background-color: var(--color2);
+}
 
+form {
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.formSection,
+.support {
+    border: solid 2px var(--font2-color);
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    max-width: 400px;
+    gap: 1rem;
+}
+
+.formSection label {
+    padding: 0.5rem;
+    text-align: right;
+    align-self: center;
+}
+
+.support {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+}
+
+.support textarea {
+    min-height: 10rem;
+}
+
+form input[type="submit"] {
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.req {
+    color: rgb(255, 0, 0);
+}
 
 footer {
     /* grid-column: 1/end; */
     text-align: center;
     padding: 1rem;
-    background-color: var(--primary-color);
+    background-color: var(--color1);
     color: var(--font1-color);
 }
