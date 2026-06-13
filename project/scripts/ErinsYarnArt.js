@@ -119,7 +119,6 @@ const product = [
         price: 20,
         image: "images/pn17.webp"
     },
-
     {
         pn: "21",
         color: ["pink"],
@@ -142,3 +141,103 @@ const product = [
         image: "images/pn24.webp"
     }
 ]
+
+createProductCard(product);
+
+const all = document.querySelector("#all");
+const red = document.querySelector("#red");
+const white = document.querySelector("#white");
+const purple = document.querySelector("#purple");
+const pink = document.querySelector("#pink");
+const orange = document.querySelector("#orange");
+const green = document.querySelector("#green");
+const peach = document.querySelector("#peach");
+const turquoise = document.querySelector("#turquoise");
+const blue = document.querySelector("#blue");
+const yellow = document.querySelector("#yellow");
+
+all.addEventListener("click", () => {
+  let all = product;
+  createProductCard(all);
+});
+
+red.addEventListener("click", () => {
+  createProductCard(product.filter(product => product.color.some(colorItems => colorItems[0] ==='red')))
+});
+
+
+
+// white.addEventListener("click", () => {
+//   let white = product;
+//   createProductCard(white);
+// });
+
+// purple.addEventListener("click", () => {
+//   let purple = product;
+//   createProductCard(purple);
+// });
+
+// pink.addEventListener("click", () => {
+//   let pink = product;
+//   createProductCard(pink);
+// });
+
+// orange.addEventListener("click", () => {
+//   let orange = product;
+//   createProductCard(orange);
+// });
+
+// green.addEventListener("click", () => {
+//   let green = product;
+//   createProductCard(green);
+// });
+
+// peach.addEventListener("click", () => {
+//   let peach = product;
+//   createProductCard(peach);
+// });
+
+// turquoise.addEventListener("click", () => {
+//   let turquoise = product;
+//   createProductCard(turquoise);
+// });
+
+// blue.addEventListener("click", () => {
+//   let blue = product;
+//   createProductCard(blue);
+// });
+
+// yellow.addEventListener("click", () => {
+//   let yellow = product;
+//   createProductCard(yellow);
+// });
+
+function createProductCard(productList) {
+    document.querySelector(".productCards").innerHTML = "";
+    productList.forEach(product => {
+    const card = document.createElement("figure");
+    const pn = document.createElement("h2");
+    const price = document.createElement("p");
+    const img = document.createElement("img");
+
+    pn.textContent = product.pn;
+    price.textContent = `$${product.price}`;
+    img.src = product.image;
+    img.alt = `Picture of product number ${product.pn} which is a .`;
+    img.loading = "lazy";
+
+    card.appendChild(pn);
+    card.appendChild(price);
+    card.appendChild(img);
+
+    document.querySelector(".productCards").appendChild(card);
+  });
+}
+
+    {
+        pn: "24",
+        color: ["red", "white"],
+        shape: "heart",
+        price: 20,
+        image: "images/pn24.webp"
+    }
