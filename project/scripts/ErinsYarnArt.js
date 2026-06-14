@@ -159,13 +159,17 @@ const yellow = document.querySelector("#yellow");
 const filters = document.getElementById('filter');
 
 filters.addEventListener('click', (filterEvent) => {
+
+    if (filterEvent.target.tagName !== 'BUTTON')
+        return;
+
     const filtering = filterEvent.target.dataset.filter;
 
     filterProducts(filtering);
 });
 
 function filterProducts(filterCriteria) {
-    if (filterCriteria === "all" || "undefined") {
+    if (filterCriteria === "all") {
         createProductCard(product)
         return;
     }
