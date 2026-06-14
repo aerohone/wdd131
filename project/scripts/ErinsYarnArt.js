@@ -156,88 +156,44 @@ const turquoise = document.querySelector("#turquoise");
 const blue = document.querySelector("#blue");
 const yellow = document.querySelector("#yellow");
 
-all.addEventListener("click", () => {
-  let all = product;
-  createProductCard(all);
+const filters = document.getElementById('filter');
+
+filters.addEventListener('click', (filterEvent) => {
+    const filtering = filterEvent.target.dataset.filter;
+
+    filterProducts(filtering);
 });
 
-red.addEventListener("click", () => {
-  createProductCard(product.filter(product => product.color.some(colorItems => colorItems[0] ==='red')))
-});
+function filterProducts(filterCriteria) {
+    if (filterCriteria === "all" || "undefined") {
+        createProductCard(product)
+        return;
+    }
 
-
-
-// white.addEventListener("click", () => {
-//   let white = product;
-//   createProductCard(white);
-// });
-
-// purple.addEventListener("click", () => {
-//   let purple = product;
-//   createProductCard(purple);
-// });
-
-// pink.addEventListener("click", () => {
-//   let pink = product;
-//   createProductCard(pink);
-// });
-
-// orange.addEventListener("click", () => {
-//   let orange = product;
-//   createProductCard(orange);
-// });
-
-// green.addEventListener("click", () => {
-//   let green = product;
-//   createProductCard(green);
-// });
-
-// peach.addEventListener("click", () => {
-//   let peach = product;
-//   createProductCard(peach);
-// });
-
-// turquoise.addEventListener("click", () => {
-//   let turquoise = product;
-//   createProductCard(turquoise);
-// });
-
-// blue.addEventListener("click", () => {
-//   let blue = product;
-//   createProductCard(blue);
-// });
-
-// yellow.addEventListener("click", () => {
-//   let yellow = product;
-//   createProductCard(yellow);
-// });
-
-function createProductCard(productList) {
-    document.querySelector(".productCards").innerHTML = "";
-    productList.forEach(product => {
-    const card = document.createElement("figure");
-    const pn = document.createElement("h2");
-    const price = document.createElement("p");
-    const img = document.createElement("img");
-
-    pn.textContent = product.pn;
-    price.textContent = `$${product.price}`;
-    img.src = product.image;
-    img.alt = `Picture of product number ${product.pn} which is a .`;
-    img.loading = "lazy";
-
-    card.appendChild(pn);
-    card.appendChild(price);
-    card.appendChild(img);
-
-    document.querySelector(".productCards").appendChild(card);
-  });
+    const filteredList = product.filter(product => product.color.includes(filterCriteria));
+    createProductCard(filteredList);
 }
 
-    {
-        pn: "24",
-        color: ["red", "white"],
-        shape: "heart",
-        price: 20,
-        image: "images/pn24.webp"
-    }
+
+function createProductCard(productList) {
+    document.querySelector("#storeList").innerHTML = "";
+    productList.forEach(product => {
+        const card = document.createElement("figure");
+        const pn = document.createElement("h2");
+        const price = document.createElement("p");
+        const img = document.createElement("img");
+
+        pn.textContent = `ID:${product.pn}`;
+        price.textContent = `$${product.price}`;
+        img.src = product.image;
+        img.alt = `Picture of product number ${product.pn} which is a .`;
+        img.loading = "lazy";
+
+
+        card.appendChild(img);
+        card.appendChild(pn);
+        card.appendChild(price);
+
+        document.querySelector("#storeList").appendChild(card);
+    });
+}
