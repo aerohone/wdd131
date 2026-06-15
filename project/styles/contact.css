@@ -111,3 +111,15 @@ footer {
     background-color: var(--color1);
     color: var(--font1-color);
 }
+
+.submit {
+    text-align: center;
+    padding: 1rem;
+}
+
+@media (max-width: 450px) {
+    .secondary {
+        width: 0px;
+    }
+
+}

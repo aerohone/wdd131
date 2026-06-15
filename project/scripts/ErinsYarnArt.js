@@ -187,7 +187,7 @@ function createProductCard(productList) {
         const price = document.createElement("p");
         const img = document.createElement("img");
 
-        pn.textContent = `ID:${product.pn}`;
+        pn.textContent = `ID: ${product.pn}`;
         price.textContent = `$${product.price}`;
         img.src = product.image;
         img.alt = `Picture of product number ${product.pn} which is a .`;
@@ -199,5 +199,42 @@ function createProductCard(productList) {
         card.appendChild(price);
 
         document.querySelector("#storeList").appendChild(card);
+
+        img.addEventListener('click', () => {
+            let viewed = JSON.parse(localStorage.getItem('recentlyViewed')) || [];
+            if (!viewed.includes(product.pn)) {
+                viewed.unshift(product.pn);
+            }
+            if (viewed.length > 3) viewed.pop();
+            localStorage.setItem('recentlyViewed', JSON.stringify(viewed));
+
+            createModelImage(product, img.alt)
+
+            const modal = document.getElementById('productModal');
+            modal.showModal();
+        });
+
     });
+}
+document.getElementById('closeModal').addEventListener('click', () => {
+    document.getElementById('productModal').close();
+});
+
+function createModelImage(product, altText) {
+    const modalContent = document.getElementById('modalContent');
+    modalContent.innerHTML = "";
+    const modalImage = document.createElement("img");
+    modalImage.src = product.image;
+    modalImage.alt = altText;
+    modalImage.style.maxWidth = "100%";
+
+    const modalTitle = document.createElement("h2");
+    modalTitle.textContent = `ID: ${product.pn}`;
+
+    const modalPrice = document.createElement("p");
+    modalPrice.textContent = `$${product.price}`;
+
+    modalContent.appendChild(modalImage);
+    modalContent.appendChild(modalTitle);
+    modalContent.appendChild(modalPrice);
 }

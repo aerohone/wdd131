@@ -55,9 +55,10 @@ nav {
 nav a:hover {
     text-decoration: underline;
 }
+
 main {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 200px auto;
 }
 
 body {
@@ -69,6 +70,32 @@ body {
 
 .mainContent {
     text-align: center;
+    background-color: var(--color1);
+    color: var(--font1-color);
+}
+
+#storeList figure {
+    position: relative;
+    margin: 1rem;
+    display: inline-block;
+    max-width: 800px;
+}
+
+#storeList img {
+    max-width: 100%;
+}
+
+#storeList figure h2 {
+    position: absolute;
+    bottom: 1.75rem;
+    left: 10px;
+    font-size: 1rem;
+}
+
+#storeList figure p {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 10px;
 }
 
 .sidebar {
@@ -107,4 +134,31 @@ footer {
 .remove {
     color: rgb(109, 3, 207);
     display: block;
+}
+
+/* Modal pop up thing */
+dialog {
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+    background-color: var(--color1);
+    color: var(--font1-color);
+    border: none;
+}
+
+dialog button {
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#storeList img {
+    cursor: zoom-in;
+}
+
+#closeModal {
+    font-size: 2rem;
 }
