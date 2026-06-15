@@ -66,8 +66,7 @@ body {
 
 main {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-
+    grid-template-columns: auto 250px;
 }
 
 .mainContent {
@@ -83,6 +82,11 @@ main {
 
 .hero figure {
     width: auto;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
 }
 
 .heroBox {
@@ -103,6 +107,7 @@ main {
     right: 0;
     margin: 1rem;
     color: var(--font2-color);
+    background-color: rgba(200, 200, 200, .5);
 }
 
 .hero .box3 {
@@ -112,6 +117,7 @@ main {
     border: none;
     background-color: var(--color2);
     padding: 0.5rem;
+
 }
 
 .hero .box3 img {
@@ -130,8 +136,6 @@ main {
 .heroBox p {
     padding-bottom: 0.5rem;
 }
-
-
 
 .sidebar {
     text-align: center;
@@ -152,4 +156,33 @@ footer {
     padding: 1rem;
     background-color: var(--color1);
     color: var(--font1-color);
+}
+
+
+
+@media (max-width: 1100px) {
+    .hero .box2 {
+        position: static;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .hero .box1 {
+        position: static;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        display: block;
+
+    }
+
+    .hero .box3 img {
+        width: 1rem;
+    }
+
+
 }

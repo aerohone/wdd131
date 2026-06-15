@@ -64,6 +64,7 @@ main {
 body {
     font-size: 16px;
     font-family: Roboto, helvetica, sans-serif;
+    background-color: var(--color2);
     /* margin: 1rem auto; */
     /* max-width: 400px; */
 }
@@ -161,4 +162,19 @@ dialog::backdrop {
 
 #closeModal {
     font-size: 2rem;
+}
+
+
+@media (max-width: 600px) {
+    main {
+        display: block;
+    }
+
+    #filter {
+        flex-direction: row;
+        align-items: start;
+        padding: 1rem;
+        max-width: 100%;
+    }
+
 }
