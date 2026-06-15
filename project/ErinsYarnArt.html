@@ -7,8 +7,8 @@
     <meta name="author" content="Cleon Hone">
     <title>Erin's Yarn Art</title>
     <meta name="description" content="Home page for Erin's Yarn Art business, a business revolving around crochet.">
-    <link rel="stylesheet" href="styles/ErinsYarnArt.css ">
-    <script src="scripts/ErinsYarnArt.js" defer></script>
+    <link rel="stylesheet" href="styles/erinsYarnArt.css ">
+    <script src="scripts/erinsYarnArt.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
 
     <!-- Google Fonts -->
@@ -24,13 +24,13 @@
 <body>
     <header>
         <div class="title">
-            <img src="images/Erin's Yarn Art logo.svg" alt="Erin's Yarn Art Logo">
+            <img src="images/erinsYarnArtlogo.svg" alt="Erin's Yarn Art Logo">
             <h1>WDD131: Erin's Yarn Art</h1>
-            <img src="images/Erin's Yarn Art logo.svg" alt="Erin's Yarn Art Logo" class="secondary">
+            <img src="images/erinsYarnArtlogo.svg" alt="Erin's Yarn Art Logo" class="secondary">
         </div>
         <nav>
             <ul class="navigation">
-                <li><a href="ErinsYarnArt.html" title="Home">Home</a></li>
+                <li><a href="erinsYarnArt.html" title="Home">Home</a></li>
                 <li><a href="store.html" title="Store">Store</a></li>
                 <li><a href="contact.html" title="Contact Us">Contact Us</a></li>
             </ul>
@@ -39,34 +39,42 @@
     <main>
         <div class="mainContent">
             <div class="hero">
-                <div class="heroBox">
-                    <figure>
-                        <img src="images/hero.jpeg"
-                            alt="Hero image of crochet supplies and micro-crochet earings, blue, green and off white color.">
-                    </figure>
+                <figure>
+                    <img src="images/hero.jpeg"
+                        alt="Hero image of crochet supplies and micro-crochet earings, blue, green and off white color.">
+                </figure>
+                <div class="heroBox box1">
+
                     <h2>Hand-crocheted</h2>
                     <p>Micro-earings made with love</p>
                 </div>
-                <div class="heroBox">
-
+                <div class="heroBox box2">
+                    <h2>Why we do it!</h2>
+                    <p>
+                        I love creating micro crochet jewelry because it's a fun challenge working on a tiny scale
+                        resulting in a fun miniature item.
+                    </p>
+                    <p>
+                        One of the best things about micro crochet is that the finished pieces are incredibly
+                        lightweight, making your ears hardly notice them at all. Creating tiny crochet pieces gives me
+                        endless opportunities to experiment with color combinations and thread types while crafting
+                        accessories that are both fun to make and wear.
+                    </p>
+                    <p>
+                        And let's be honest, miniature things are always cuter than full sized.
+                    </p>
                 </div>
-                <!-- find us on Etsy! -->
-
+                <div class="heroBox box3">
+                    <a href="" target="_blank" rel="noopener">
+                        <img src="images/etsy.svg" alt="Find us on ETSY">
+                    </a>
+                </div>
             </div>
-
-
-
-
-
-
-
-
-
         </div>
 
         <div class="sidebar">
-            <h2>Text Title Placeholder</h2>
-            <p>Placeholder</p>
+            <h2>Recently Viewed Items</h2>
+            <div id="recentlyViewed"></div>
         </div>
     </main>
     <footer>

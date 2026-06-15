@@ -59,6 +59,7 @@ nav a:hover {
 body {
     font-size: 16px;
     font-family: Roboto, helvetica, sans-serif;
+    background-color: var(--color2);
     /* margin: 1rem auto; */
     /* max-width: 400px; */
 }
@@ -66,14 +67,83 @@ body {
 main {
     display: grid;
     grid-template-columns: 2fr 1fr;
+
 }
 
 .mainContent {
     text-align: center;
 }
 
+.hero {
+    position: relative;
+    margin: 1rem;
+    display: inline-block;
+
+}
+
+.hero figure {
+    width: auto;
+}
+
+.heroBox {
+    border: 2px solid var(--font2-color);
+    border-radius: 10px;
+    /* position: absolute; */
+}
+
+.hero .box1 {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.hero .box2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+    color: var(--font2-color);
+}
+
+.hero .box3 {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: none;
+    background-color: var(--color2);
+    padding: 0.5rem;
+}
+
+.hero .box3 img {
+    width: 2rem;
+}
+
+.heroBox h2,
+.heroBox p {
+    padding: 0 0.5rem;
+}
+
+.heroBox h2 {
+    padding-top: 0.5rem;
+}
+
+.heroBox p {
+    padding-bottom: 0.5rem;
+}
+
+
+
 .sidebar {
     text-align: center;
+    margin: 1rem;
+}
+
+#recentlyViewed figure {
+    padding: 1rem;
+}
+
+#recentlyViewed figure img {
+    max-width: 200px;
 }
 
 footer {
@@ -83,4 +153,3 @@ footer {
     background-color: var(--color1);
     color: var(--font1-color);
 }
-
