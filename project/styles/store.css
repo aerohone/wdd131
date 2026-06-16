@@ -84,6 +84,7 @@ body {
 
 #storeList img {
     max-width: 100%;
+    cursor: zoom-in;
 }
 
 #storeList figure h2 {
@@ -154,10 +155,6 @@ dialog button {
 
 dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.7);
-}
-
-#storeList img {
-    cursor: zoom-in;
 }
 
 #closeModal {
