@@ -76,6 +76,7 @@ form {
     grid-template-columns: max-content 1fr;
     max-width: 400px;
     gap: 1rem;
+    background-color: rgb(240, 240, 240);
 }
 
 .formSection label {
@@ -101,7 +102,7 @@ form input[type="submit"] {
 }
 
 .req {
-    color: rgb(255, 0, 0);
+    color: rgb(116, 0, 0);
 }
 
 footer {
